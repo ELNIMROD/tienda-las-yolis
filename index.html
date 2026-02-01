@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport"
+    content="width=device-width,
+    initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abarrotes las Yolis</title>
+
+<style>
+
+.slider {
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.slide.activo {
+    opacity: 1;
+}
+
+    .footer{
+
+background-color: #222;
+color: white;
+text-align: center;
+padding: 15px;
+    }
+
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Barra superior */
+header {
+  background: #e63946;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Botón hamburguesa */
+.menu-btn {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Menú */
+nav {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 70%;
+  height: 100%;
+  background: #1d3557;
+  padding-top: 60px;
+  transition: 0.3s;
+}
+
+/* Mostrar menú */
+nav.active {
+  left: 0;
+}
+
+nav a {
+  display: block;
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+nav a:hover {
+  background: #457b9d;
+}
+
+/* Contenido */
+main {
+  padding: 20px;
+}
+</style>
+</head>
+
+<body>
+    
+    
+
+<header>
+  <span class="menu-btn" onclick="toggleMenu()">☰</span>
+  <img src="img/abarrotes.jpeg" alt="imagen"
+  width="100" height="100">
+  <h2>Abarrotes las Yolis</h2>
+
+</header>
+
+<nav id="menu">
+  <a href="#">Comida</a>
+  <a href="#">Limpieza</a>
+  <a href="#">Farmacia</a>
+  
+</nav>
+
+<main>
+  <h3>Bienvenidos</h3>
+  <p>Abarrotes las Yolis en la palma de tu mano 📱</p>
+</main>
+
+<div class="slider">
+
+<img src="img/tienda.jpg" class="slide activo">
+<img src="img/tienda1.jpg" class="slide activo">
+<img src="img/tienda 2.jpg" class="slide activo">
+<img src="img/tienda 3.jpg" class="slide activo">
+</div>
+
+
+
+<script>
+let indice = 0;
+const slides = document.querySelectorAll(".slide");
+
+setInterval(() => {
+  slides[indice].classList.remove("activo");
+  indice = (indice + 1) % slides.length;
+  slides[indice].classList.add("activo");
+}, 3000);
+</script>
+
+<script>
+
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<footer class="footer">
+
+    <p>2o. And. Istmo 9, Alborada Jaltenco, 55783 Alborada Jaltenco, Méx.</p>    
+    </footer>
+</body>
+</html>
